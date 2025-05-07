@@ -111,10 +111,6 @@ Done in the code:
 
 Cluster page empty after delection
 
-![image](https://github.com/user-attachments/assets/c8815168-ca14-4faf-9afe-8ff8148477ee)
-
-![image](https://github.com/user-attachments/assets/6caa3e6d-b52b-4b7c-ac37-4432bbb6b6e1)
-
 ![image](https://github.com/user-attachments/assets/51701757-8177-42f0-8ff5-3277af5b57c2)
 
 ## Appendix - Scores
