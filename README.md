@@ -50,10 +50,10 @@ y_df = x_df.pop("y").apply(lambda s: 1 if s == "yes" else 0)
 
 Afterwards we add two parameters for logistic regression were designated to be selected randomly. 
 
-### Inverse regularization strength
+***Inverse regularization strength
 Which was set to either 0.1, 0.5, 1, or 5, with 1 being the default setting. 
 
-### Maximum number of iterations
+***Maximum number of iterations
 Which was set to either 50, 100, or 500, with the default being 100. 
 
 Both parameters supporting the the classification task for the  logistic regression, utilizing them to make predictions.
