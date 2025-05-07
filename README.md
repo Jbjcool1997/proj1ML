@@ -51,7 +51,7 @@ To begin, the tabular data was imported and prepared by removing any inconsisten
 
 y_df = x_df.pop("y").apply(lambda s: 1 if s == "yes" else 0)
 
-Afterwards we add two parameters for logistic regression were designated to be selected randomly. 
+Afterwards we add two parameters for logistic regression: 
 
 Inverse regularization strength:
 Which was set to either 0.1, 0.5, 1, or 5, with 1 being the default setting. 
