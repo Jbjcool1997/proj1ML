@@ -5,6 +5,9 @@ This project is part of the Udacity Azure ML Nanodegree.
 In this project, we build and optimize an Azure ML pipeline using the Python SDK and a provided Scikit-learn model.
 This model is then compared to an Azure AutoML run.
 
+![image](https://github.com/user-attachments/assets/cd05b91f-e40c-490a-bd1a-6264dbf6c2e7)
+
+
 ## Useful Resources
 - [ScriptRunConfig Class](https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.scriptrunconfig?view=azure-ml-py)
 - [Configure and submit training runs](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-set-up-training-targets)
@@ -14,11 +17,40 @@ This model is then compared to an Azure AutoML run.
 
 ## Summary
 **In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
+The dataset originates from a marketing campaign and includes details about individuals who were contacted over the phone. The objective is to forecast whether a person will respond positively ("yes") and become a lead, the yes is represented in the column "y" which is the target column for this exercise.
+Tabel overview:
+
+![image](https://github.com/user-attachments/assets/d63990bc-0675-47db-99d5-04111828bc43)
+
+
+It should be highlighted that the data contains large amont of "no" in column "y", as seen when exploring the data with azure.
+![image](https://github.com/user-attachments/assets/05a10897-bd3b-45df-8318-f12dd6ed76c5)
+
 
 **In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
+The best performing model based on accuracy was the automl model, which performed 0.9166920.
+While the hyperdrive performed 0.9141782.
+
+AutoML (Project1automl)
+![image](https://github.com/user-attachments/assets/a2405b2a-4503-4642-b756-5a6c135ac141)
+
+
+Hyperdrive (HD)
+![image](https://github.com/user-attachments/assets/82952ad7-65db-4ad0-a190-bd2111e94798)
+
+
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
+To begin, the tabular data was imported and prepared by removing any inconsistencies or irrelevant information. fx, cleaning of the target column, changing yes and no into 1 and 0.
+
+y_df = x_df.pop("y").apply(lambda s: 1 if s == "yes" else 0)
+
+Afterwards we add two parameters for logistic regression were designated to be selected randomly. 
+### inverse regularization strength
+
+These parameters include the inverse regularization strength, which was set to either 0.1, 0.5, 1, or 5, with 1 being the default setting, and the maximum number of iterations, which was set to either 50, 100, or 500, with the default being 100. For the classification task, logistic regression was employed, utilizing the specified parameters to make predictions.
+
 
 **What are the benefits of the parameter sampler you chose?**
 
