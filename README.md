@@ -78,8 +78,11 @@ policy = BanditPolicy(evaluation_interval=2, slack_factor=0.1)
 The best automl model was voting ensemble with 3 hyperparameters:
 
 Light GMB occuring 3 times with an accumulated weight of 50%
+
 LogisticRegression occruing 4 times with an accumulated weight of 36%
+
 Random forrest occuring 1 time with a score of 14%
+
 (See images under appendix at the end of scope pr. hyper parameter)
 
 ![image](https://github.com/user-attachments/assets/178645c7-e64d-435d-ba93-a3d23c1e45aa)
