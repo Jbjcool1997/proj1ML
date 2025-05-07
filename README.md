@@ -59,7 +59,7 @@ Which was set to either 0.1, 0.5, 1, or 5, with 1 being the default setting.
 Maximum number of iterations:
 Which was set to either 50, 100, or 500, with the default being 100. 
 
-Both parameters supporting the the classification task for the  logistic regression, utilizing them to make predictions.
+Both parameters supporting the classification task for the  logistic regression, utilizing them to make predictions.
 
 **What are the benefits of the parameter sampler you chose?**
 
