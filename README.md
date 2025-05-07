@@ -23,7 +23,9 @@ Tabel overview:
 ![image](https://github.com/user-attachments/assets/d63990bc-0675-47db-99d5-04111828bc43)
 
 
+
 It should be highlighted that the data contains large amont of "no" in column "y", as seen when exploring the data with azure.
+
 ![image](https://github.com/user-attachments/assets/05a10897-bd3b-45df-8318-f12dd6ed76c5)
 
 
@@ -31,11 +33,11 @@ It should be highlighted that the data contains large amont of "no" in column "y
 The best performing model based on accuracy was the automl model, which performed 0.9166920.
 While the hyperdrive performed 0.9141782.
 
-AutoML (Project1automl)
+### AutoML (Project1automl)
 ![image](https://github.com/user-attachments/assets/a2405b2a-4503-4642-b756-5a6c135ac141)
 
 
-Hyperdrive (HD)
+### Hyperdrive (HD)
 ![image](https://github.com/user-attachments/assets/82952ad7-65db-4ad0-a190-bd2111e94798)
 
 
@@ -47,10 +49,14 @@ To begin, the tabular data was imported and prepared by removing any inconsisten
 y_df = x_df.pop("y").apply(lambda s: 1 if s == "yes" else 0)
 
 Afterwards we add two parameters for logistic regression were designated to be selected randomly. 
-### inverse regularization strength
 
-These parameters include the inverse regularization strength, which was set to either 0.1, 0.5, 1, or 5, with 1 being the default setting, and the maximum number of iterations, which was set to either 50, 100, or 500, with the default being 100. For the classification task, logistic regression was employed, utilizing the specified parameters to make predictions.
+### Inverse regularization strength
+Which was set to either 0.1, 0.5, 1, or 5, with 1 being the default setting. 
 
+### Maximum number of iterations
+Which was set to either 50, 100, or 500, with the default being 100. 
+
+Both parameters supporting the the classification task for the  logistic regression, utilizing them to make predictions.
 
 **What are the benefits of the parameter sampler you chose?**
 
