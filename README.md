@@ -70,7 +70,6 @@ As well as being rather easy to fine tune.
 
 In my assignment, I used Bandit policy, as it manages resources very efficiently by terminating jobs that do not perform well compared to the best job, using a defined slack factor.
 
-# Specify a Policy
 policy = BanditPolicy(evaluation_interval=2, slack_factor=0.1)
 
 ## AutoML
